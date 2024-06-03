@@ -10,17 +10,17 @@ const client = generateClient<Schema>();
 function App() {
   const [toMail, setToMail] = useState('');
   const [body, setBody] = useState('');
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
+  //const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
-  useEffect(() => {
-    client.models.Todo.observeQuery().subscribe({
-      next: (data) => setTodos([...data.items]),
-    });
-  }, []);
+ // useEffect(() => {
+   // client.models.Todo.observeQuery().subscribe({
+     // next: (data) => setTodos([...data.items]),
+    //});
+  //}, []);
 
-  function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
-  }
+  //function createTodo() {
+    //client.models.Todo.create({ content: window.prompt("Todo content") });
+  //}
   function sendToMail()
   {
     console.log("Hii");
