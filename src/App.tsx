@@ -24,6 +24,7 @@ function App() {
         }),
       });
       const data = await response.json();
+      console.log("data fetched ex");
       console.log(data);
       if (response.status === 200) {
         // Set the success message
@@ -33,7 +34,8 @@ function App() {
         setTimeout(() => {
           window.location.reload();
         }, 5000);
-      } else {
+      } 
+      else {
         // Handle error
         console.error('Error sending email:', response.status);
       }
