@@ -27,6 +27,7 @@ function App() {
       console.log("data fetched ex");
       console.log(data);
       if (response.status === 200) {
+        
         // Set the success message
         setSuccessMessage('Email sent successfully!');
 
